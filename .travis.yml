@@ -8,11 +8,17 @@ env:
 
 jdk: oraclejdk7
 
+
 android:
   components:
-    - build-tools-23.0.1
-    - android-23
-    - android-22
+     - tools
+     - build-tools-22.0.1
+     - extra
+     - android-22
+     - android-19
+     - android-14
+     - addon-google_apis-google-21
+     - addon-google_apis-google-19
 
 script:
     - ./gradlew testBlueDebugUnitTestCoverage
