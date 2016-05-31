@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.github.kt3k.coveralls'
 apply from: '../jacoco.gradle'
 
 android {
@@ -41,4 +41,12 @@ dependencies {
     testCompile "org.robolectric:robolectric:3.0-rc3"
     testCompile "junit:junit:4.12"
     testCompile "org.assertj:assertj-core:1.7.0"
+}
+
+coveralls {
+    jacocoReportPath = "${buildDir}/reports/coverage/debug/report.xml"
+}
+tasks.coveralls {
+    dependsOn 'testBlueDebugUnitTestCoverage'
+    onlyIf { System.env.'CI' }
 }
