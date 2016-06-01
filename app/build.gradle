@@ -44,7 +44,7 @@ dependencies {
 }
 
 coveralls {
-    jacocoReportPath = "${buildDir}/Users/cnieto/workspace/Coveralls-Android/app/build/reports/jacoco/testBlueDebugUnitTestCoverage/testBlueDebugUnitTestCoverage.xml"
+    jacocoReportPath = "${buildDir}/reports/jacoco/testBlueDebugUnitTestCoverage/testBlueDebugUnitTestCoverage.xml"
 }
 tasks.coveralls {
     dependsOn 'testBlueDebugUnitTestCoverage'
