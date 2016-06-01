@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.github.kt3k.coveralls'
-apply from: '../jacoco.gradle'
+apply plugin: "net.saliman.cobertura"
 
 android {
     compileSdkVersion 23
@@ -18,16 +18,23 @@ android {
             testCoverageEnabled = true
         }
     }
-    productFlavors {
-        blue {}
-
-        red {}
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+}
+
+cobertura {
+
+    coverageExcludes = ['.*android.support.v7.appcompat.*',
+                        '.*net.coveralls.cobertura.R.*',
+                        '.*net.coveralls.cobertura.BuildConfig.*',
+                        ]
+
+                        coverageDirs = [
+            "src/main/java",
+    ]
 }
 
 dependencies {
@@ -41,12 +48,4 @@ dependencies {
     testCompile "org.robolectric:robolectric:3.0-rc3"
     testCompile "junit:junit:4.12"
     testCompile "org.assertj:assertj-core:1.7.0"
-}
-
-coveralls {
-    jacocoReportPath = "${buildDir}/reports/jacoco/testBlueDebugUnitTestCoverage/testBlueDebugUnitTestCoverage.xml"
-}
-tasks.coveralls {
-    dependsOn 'testBlueDebugUnitTestCoverage'
-    onlyIf { System.env.'CI' }
 }

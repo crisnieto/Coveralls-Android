@@ -1,5 +1,5 @@
 <manifest
-    package="net.gouline.jacoco"
+    package="net.coveralls.cobertura"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".activity.MainActivity"
+            android:name="net.coveralls.cobertura.activity.MainActivity"
             android:screenOrientation="portrait">
 
             <intent-filter>
