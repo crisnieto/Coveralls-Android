@@ -12,4 +12,4 @@ script:
     - ./gradlew testDebugUnitTest
 
 after_success:
-    - ./gradlew cobertura coveralls
+    - ./gradlew coberturaReport coveralls
