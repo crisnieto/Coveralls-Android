@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: "net.saliman.cobertura"
 
-cobertura.coverageFormats = ['html', 'xml']
 
 android {
     compileSdkVersion 23
@@ -38,6 +37,8 @@ cobertura {
                         coverageDirs = [
             "src/main/java",
     ]
+    coverageFormats = ['html', 'xml']
+
 }
 
 dependencies {
