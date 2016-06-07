@@ -40,6 +40,9 @@ cobertura {
     coverageFormats = ['html', 'xml']
 
 }
+coveralls {
+    	coberturaReportPath = 'build/reports/coverage/coverage.xml'
+    }
 
 dependencies {
     // Support
