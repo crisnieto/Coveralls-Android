@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: "net.saliman.cobertura"
 
+cobertura.coverageFormats = ['html', 'xml']
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -30,6 +32,7 @@ cobertura {
     coverageExcludes = ['.*android.support.v7.appcompat.*',
                         '.*net.coveralls.cobertura.R.*',
                         '.*net.coveralls.cobertura.BuildConfig.*',
+                        '.*\\$\\$ViewInjector'
                         ]
 
                         coverageDirs = [

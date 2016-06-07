@@ -9,4 +9,4 @@ android:
     - android-23
 
 script:
-    - ./gradlew testBlueDebugUnitTestCoverage coveralls
+    - ./gradlew cobertura -x testDebugUnitTest coveralls
