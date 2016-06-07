@@ -9,7 +9,4 @@ android:
     - android-23
 
 script:
-    - ./gradlew testDebugUnitTest coberturaReport performCoverageCheck
-
-after_success:
-    - ./gradlew coveralls
+    - ./gradlew testDebugUnitTest coberturaReport performCoverageCheck coveralls
