@@ -3,13 +3,13 @@ apply plugin: 'com.github.kt3k.coveralls'
 apply from: '../jacoco.gradle'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
 
     defaultConfig {
         applicationId "net.gouline.jacoco"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }

@@ -10,3 +10,4 @@ android:
 
 script:
     - ./gradlew testBlueDebugUnitTestCoverage coveralls
+    - bash <(curl -s https://codecov.io/bash) -t c8702836-b88c-4e2f-90b0-12a23b2f5637 -f app/build/reports/jacoco/testBlueDebugUnitTestCoverage/testBlueDebugUnitTestCoverage.xml
