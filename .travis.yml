@@ -5,7 +5,7 @@ android:
     - tools
     - extra
     - platform-tools
-    - build-tools-23.0.1
+    - build-tools-23.0.3
     - android-23
 
 script:
